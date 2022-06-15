@@ -30,5 +30,23 @@ const readAndAppend = (content, file) => {
     }
   });
 };
+  /**
+   *  Function to read data from a given file, delete an element based on an 
+   *  identifier and append the filter content back the file
+   *  @param {string} file The path to the file you want to save to.
+   *  @param {string} identifier identifier of the object you want to delete
+   *  @returns {void} Nothing
+   */
+  const readFilterAndAppend = (file, identifier) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        const parsedData = JSON.parse(data);
+        const filteredData = parsedData.filter(obj => obj.id !== identifier);
+        writeToFile(file, filteredData);
+      }
+    });
+  };
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+module.exports = { readFromFile, writeToFile, readAndAppend, readFilterAndAppend };
