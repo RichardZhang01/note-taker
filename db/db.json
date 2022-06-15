@@ -5,8 +5,18 @@
         "id": "23b6ab58-59c4-47ec-bfb6-81b6934c7919"
     },
     {
-        "title": "Little Red House",
-        "text": "Big Purple Hammer",
-        "id": "400bd8c6-2d03-45cb-9633-078235f2b4f6"
+        "title": "Visit Library",
+        "text": "Read Books",
+        "id": "b1f76926-8f75-4ba6-b277-0bea8a5388eb"
+    },
+    {
+        "title": "Coding Practice",
+        "text": "Review documentation\nWork on Challenge 12",
+        "id": "e3d327d4-5f07-477b-adfe-23ced78b7968"
+    },
+    {
+        "title": "Remember to Sleep",
+        "text": "Maybe...",
+        "id": "62c0ef71-2969-4888-9f4e-baae48d6c4eb"
     }
 ]
