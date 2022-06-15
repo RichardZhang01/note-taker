@@ -1,16 +1,12 @@
 const api = require('express').Router();
-// const fs = require('fs');
-// const path = require('path');
-const { readFromFile, readAndAppend, readFilterAndAppend } = require('../helpers/fsUtils')
+const { readFromFile, readAndAppend, readFilterAndAppend } = require('../helpers/fsUtils');
 const { v4: uuidv4 } = require('uuid');
 
 api.get('/', (req, res) => {
-    // res.sendFile(path.join(__dirname, '../db/db.json'));
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 api.post('/', (req, res) => {
-    // let db = fs.readFileSync('')
     const { title, text } = req.body;
     if (req.body) {
         const newNote = {
@@ -27,10 +23,9 @@ api.post('/', (req, res) => {
 });
 
 api.delete('/:id', (req, res) => {
-    // let db = fs.readFileSync('')
-    const identifier = req.params.id;
-    if (identifier) {
-        readFilterAndAppend('./db/db.json', identifier);
+    const { id } = req.params;
+    if (id) {
+        readFilterAndAppend('./db/db.json', id);
         res.json(`Note deleted successfully`);
     } else {
         res.error('Error in deleting note');

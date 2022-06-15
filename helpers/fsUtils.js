@@ -14,7 +14,7 @@ const writeToFile = (destination, content) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
 /**
- *  Function to read data from a given a file and append some content
+ *  Function to read data from a given file and append some content
  *  @param {object} content The content you want to append to the file.
  *  @param {string} file The path to the file you want to save to.
  *  @returns {void} Nothing
@@ -32,7 +32,7 @@ const readAndAppend = (content, file) => {
 };
   /**
    *  Function to read data from a given file, delete an element based on an 
-   *  identifier and append the filter content back the file
+   *  identifier and append the filtered content back to the file
    *  @param {string} file The path to the file you want to save to.
    *  @param {string} identifier identifier of the object you want to delete
    *  @returns {void} Nothing
